@@ -14,6 +14,29 @@
         <!-- AVAILABLE ITEMS -->
         <Label Content="Available Products" FontWeight="Bold" FontSize="14"/>
 
+
+        <!-- SEARCH BAR -->
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Search:" VerticalAlignment="Center"/>
+            <TextBox x:Name="TxtSearch"
+             Width="200"
+             Margin="5,0"/>
+            <Button Content="Search"
+            Click="Search_Click"/>
+            <Button Content="Clear" Margin="5,0,0,0" Click="ClearSearch_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="10,0,10,5">
+            <TextBlock Text="Sort:" VerticalAlignment="Center"/>
+            <Button Content="Price ↑" Click="SortPriceAsc_Click" Margin="5,0,5,0"/>
+            <Button Content="Price ↓" Click="SortPriceDesc_Click" Margin="0,0,5,0"/>
+            <Button x:Name="SortNameBtn" Content="Name A→Z" Click="SortNameAsc_Click" Margin="0,0,5,0"/>
+            <Button Content="Clear Sort" Click="ClearSort_Click"/>
+        </StackPanel>
+
+
+
+
         <DataGrid x:Name="ProductsGrid"
            Height="200"
            AutoGenerateColumns="False"
